@@ -46,7 +46,8 @@ form.addEventListener('submit', function(event) {
         // Llama a la función de Newton-Raphson y muestra el resultado
         const result = raphson(funcInput, x0Input, tolInput, maxIterInput);
         resultDiv.innerHTML = `<center><p>Raíz aproximada: ${result.root}</p></center>
-                               <center><p>Iteraciones: ${result.iterations}</p></center>`;
+                               <center><p>Iteraciones: ${result.iterations}</p></center>
+                               <center><p>Error: ${result.error}</p></center>`;
     } catch (err) {
         resultDiv.innerHTML = `<p style="color:red;">Error al calcular: ${err && err.message ? err.message : err}</p>`;
         console.error(err);
@@ -68,14 +69,16 @@ function raphson(func, x0, tol, maxIter = 10000) {
         }
         // Formula de Newton-Raphson
         const x_next = x - f_x / f_prime_x;
+        // Calculo del error relativo
+        const error = Math.abs((x_next - x)/x_next);
         if (Math.abs(x_next - x) < tol) {
-            return { root: x_next, iterations: iterations + 1 };
+            return { root: x_next, iterations: iterations + 1, error: error };
         }
         // Actualiza x para la siguiente iteración
         x = x_next;
         iterations++;
     }
-    return { root: x, iterations: iterations };
+    return { root: x, iterations: iterations + 1, error: error };
 }
 
 // Resultado mostrado dentro del handler de envío para evitar referencias fuera de alcance

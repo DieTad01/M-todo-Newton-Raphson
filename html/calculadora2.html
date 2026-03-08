@@ -8,19 +8,18 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <h1>Calculadora del Método de Newton-Raphson</h1>
+    <h1>Calculadora del Método de Bisección</h1>
     <form id="form">
         <label for="funcion">Función f(x):</label>
         <input type="text" id="funcion" name="funcion" placeholder="Ejemplo: x^2 - 2"><br>
         
-        <label for="aproximacion">Aproximación inicial x0:</label>
-        <input type="text" id="aproximacion" name="aproximacion" placeholder="Ejemplo: 1.5"><br>
+        <label for="a">Intervalo [a, b]:</label>
+        <input type="text" id="a" name="a" placeholder="Ejemplo: 1"><br>
+        <input type="text" id="b" name="b" placeholder="Ejemplo: 2"><br>
 
         <label for="tolerancia">Tolerancia:</label>
         <input type="text" id="tolerancia" name="tolerancia" placeholder="Ejemplo: 0.001"><br>
 
-        <label for="iteraciones">Máximo de iteraciones:</label>
-        <input type="number" id="iteraciones" name="iteraciones" placeholder="Ejemplo: 100" value="100"><br>
         <button type="submit">Calcular</button>
     </form>
 
@@ -32,7 +31,7 @@
     <center><footer><strong>Autor: Pérez Hernández Diego Tadeo</strong></footer></center>
     <!-- No se te olvide si ocupas otra libreria en tu script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
-    <script src="../js/calculadora.js"></script>
+    <script src="../js/calculadora2.js"></script>
 
 </body>
 </html>

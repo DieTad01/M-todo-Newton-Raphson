@@ -19,22 +19,19 @@ h1{
     font-size: 40px;
 }
 
+h2{
+    color: rgb(109, 109, 224);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+
 p{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: justify;
     margin: 24px;
-}
-
-pre{
-    background-color: lightgray;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: Consolas, monospace;
-    font-size: 20px;
-    margin: 20px;
-    text-align: center;
 }
 
 ul{
@@ -56,6 +53,25 @@ a{
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
+}
+
+hr{
+    border: 2px solid #000000;
+    margin: 10px 0;
+}
+
+#formula{
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(155, 155, 163);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#formula p{
+    text-align: center;
 }
 
 form{
@@ -97,7 +113,7 @@ footer{
     text-align: center;
     margin: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 24px;
     bottom: 0;
     width: 97%;
 }
@@ -109,4 +125,28 @@ footer{
     font-size: 25px;
     width: 80%;
     text-align: center;
+}
+
+#result p{
+    color: black;
+    text-align: center;
+}
+
+#descarga{
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin: 20px;
+}
+
+#descarga a{
+    width: 250px;
+    background-color: rgb(97, 170, 192);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 10px;
 }

@@ -5,26 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/icon.png" type="image/png">
-    <title>Método de Raphson</title>
+    <!-- Carga de MathJax para renderizar fórmulas matemáticas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Métodos de la unidad 1</title>
 </head>
 <body>
     <h1>Método de Newton-Raphson</h1><br>
     <p>El método de Raphson es un algoritmo para encontrar raíces de funciones. Se basa en la idea
         de aproximar la función por una línea tangente y usar esa línea para encontrar una mejor
          aproximación de la raíz.</p><br>
-    <p>La fórmula del método de Raphson es:</p>
-    <pre>
-        x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
-    </pre><br>
-    <p>Donde:</p>
-    <ul>
-        <li><strong>x_n</strong> es la aproximación actual de la raíz.</li>
-        <li><strong>f(x_n)</strong> es el valor de la función en la aproximación actual.</li>
-        <li><strong>f'(x_n)</strong> es el valor de la derivada de la función en la aproximación actual.</li>
-    </ul>
+
+    <!-- La fórmula del método de Raphson -->
+    <h2>La fórmula del método de Raphson es:</h2>
+    <div id="formula">
+        <!-- Uso de MathJax para renderizar la fórmula
+        Necesitas los $$ para funcionar -->
+        $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
+    </div>
+    <br>
+
+    <!-- Variables del método de Raphson -->
+    <h2>Donde:</h2>
+    <div id="formula">
+        <p>$$x_n$$ Es la aproximación actual de la raíz.</p>
+        <p>$$f(x_n)$$ Es el valor de la función en la aproximación actual.</p>
+        <p>$$f'(x_n)$$ Es el valor de la derivada de la función en la aproximación actual.</p>
+    </div>
     <p>El proceso se repite hasta que se alcanza una aproximación suficientemente precisa o se cumple un criterio de convergencia.</p><br>
-    <a href="html/calculadora.html">Ir a la calculadora</a><br>
     
-    <center><footer>Autor: Pérez Hernández Diego Tadeo</footer></center>
+    <a href="html/calculadora.html">Ir a la calculadora</a><br>
+    <div id="descarga">
+         <a href="../Metodo raphson/assets/newton-raphason.py" download>Descargar archivo Python</a>
+         <a href="../Metodo raphson/assets/Metodo Newton Raphson.xlsx" download>Descargar archivo Excel</a>
+    </div>
+
+    <hr>
+
+    <h1>Método de bisección</h1>
+    <p>El método de bisección es un algoritmo para encontrar raíces de funciones continuas. Se basa en la idea de dividir el intervalo
+        en dos partes y seleccionar la subintervalo que contiene la raíz.</p><br>
+    <p>El proceso se repite hasta que se alcanza una aproximación suficientemente precisa o se cumple un criterio de convergencia.</p><br>
+    
+    <!-- La fórmula del método de bisección -->
+    <h2>La fórmula del método de bisección es:</h2>
+    <div id="formula">
+        $$x_{n+1} = \frac{a_n + b_n}{2}$$
+    </div>
+    <br>
+    <!-- Variables del método de bisección -->
+    <h2>Donde:</h2>
+    <div id="formula">
+        <p>$$a_n$$ Es el extremo izquierdo del intervalo actual.</p>
+        <p>$$b_n$$ Es el extremo derecho del intervalo actual.</p>
+    </div><br>
+
+    <!-- Fórmula para calcular el número de iteraciones necesarias -->
+    <h2>La fórmula para calcular iteraciones</h2>
+    <div id="formula">
+        $$n > \frac{Ln(b-a)-Ln(\epsilon)}{Ln(2)}$$
+    </div>
+    <br>
+    <!-- Variables para calcular el número de iteraciones necesarias -->
+    <h2>Donde:</h2>
+    <div id="formula">
+        <p>$$a$$ Es el extremo izquierdo del intervalo inicial.</p>
+        <p>$$b$$ Es el extremo derecho del intervalo inicial.</p>
+        <p>$$\epsilon$$ Es la tolerancia o error permitido.</p>
+    </div><br>
+
+    <a href="html/calculadora2.html">Ir a la calculadora</a><br>
+    <div id="descarga">
+         <a href="../Metodo raphson/assets/balzano.py" download>Descargar archivo Python</a>
+         <a href="../Metodo raphson/assets/Metodo Bisección.xlsx" download>Descargar archivo Excel</a>
+    </div>
+
+    <hr>
+
+    <center><footer><strong>Autor: Pérez Hernández Diego Tadeo</strong></footer></center>
 </body>
 </html>
